@@ -48,7 +48,7 @@ interface GeneratedImage {
   file_size: number | null
 }
 
-function App(): JSX.Element {
+function App() {
   const [apiKey, setApiKey] = useState<string>('')
   const [apiKeySet, setApiKeySet] = useState<boolean>(false)
   const [images, setImages] = useState<File[]>([])
