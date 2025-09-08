@@ -1,5 +1,6 @@
 import { useState, useRef, ChangeEvent } from 'react'
 import { fal } from '@fal-ai/client'
+import { Analytics } from '@vercel/analytics/react'
 
 interface WorkflowEvent {
   type: 'submit' | 'completion' | 'error' | 'output'
@@ -456,6 +457,7 @@ function App() {
           </div>
         )}
       </div>
+      <Analytics />
     </div>
   )
 }
