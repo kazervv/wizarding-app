@@ -108,7 +108,7 @@ function App(): JSX.Element {
       }
       
       console.log('Submitting workflow with input:', workflowInput)
-      setCurrentStage('Generating fantasy world descriptions...')
+      setCurrentStage('Generating adventure video descriptions...')
       
       const stream = await fal.stream("workflows/derek/wizarding-5-no-extend", {
         input: workflowInput
@@ -123,7 +123,7 @@ function App(): JSX.Element {
           if (event.node_id?.includes('any_llm/vision')) {
             setCurrentStage('Analyzing your image and generating world descriptions...')
           } else if (event.node_id?.includes('nano_banana')) {
-            setCurrentStage('Creating fantasy world images...')
+            setCurrentStage('Creating adventure video images...')
           } else if (event.node_id?.includes('veo3')) {
             setCurrentStage('Converting images to videos...')
           } else if (event.node_id?.includes('ffmpeg')) {
@@ -194,7 +194,7 @@ function App(): JSX.Element {
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-2 bg-yellow-100 border border-yellow-300 text-yellow-800 px-3 py-1.5 rounded-full text-sm font-medium">
             <span className="text-yellow-600">⚠️</span>
-            <span>Running this workflow uses ~$10 of credits</span>
+            <span>Running this workflow uses ~$13 of credits</span>
           </div>
         </div>
         
@@ -203,7 +203,7 @@ function App(): JSX.Element {
           <h1 className="text-4xl font-bold text-blue-600">
             ✨ Wizarding Workflow
           </h1>
-          <p className="text-gray-600 mt-2">Transform your images into magical fantasy worlds</p>
+          <p className="text-gray-600 mt-2">Transform your images into magical adventure videos</p>
         </div>
         
         {/* API Key Section */}
@@ -212,9 +212,33 @@ function App(): JSX.Element {
             <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
               🔐 Enter your fal.ai API Key
             </h2>
-            <p className="text-gray-600 mb-4 text-sm">
-              Your API key is required to access the fantasy world generator
+            <p className="text-gray-600 mb-3 text-sm">
+              Get your API key from{' '}
+              <a 
+                href="https://fal.ai/dashboard/keys" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-700 underline"
+              >
+                fal.ai dashboard
+              </a>
             </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+              <p className="text-xs text-blue-800">
+                <span className="font-semibold">🔒 Privacy:</span> This site does not store your API key. It's only used in your browser session.
+              </p>
+              <p className="text-xs text-blue-800 mt-1">
+                Prefer to run locally? Clone from{' '}
+                <a 
+                  href="https://github.com/derekalia/wizarding" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="underline hover:text-blue-900"
+                >
+                  GitHub
+                </a>
+              </p>
+            </div>
             <div className="space-y-4">
               <input
                 type="password"
@@ -248,7 +272,7 @@ function App(): JSX.Element {
               📤 Upload Images (up to 4)
             </h2>
             <p className="text-gray-600 mb-6 text-sm">
-              Select images that will serve as inspiration for your fantasy world locations
+              Select images that will serve as inspiration for your adventure video locations
             </p>
             
             <input
@@ -299,9 +323,9 @@ function App(): JSX.Element {
               <div className="flex items-start gap-3">
                 <span className="text-blue-600 text-lg">✨</span>
                 <div>
-                  <h3 className="font-semibold text-blue-900">Fantasy World Generator</h3>
+                  <h3 className="font-semibold text-blue-900">Adventure Video Generator</h3>
                   <p className="text-sm text-blue-700 mt-1">
-                    Upload images to generate four fantasy world locations with a consistent character perspective. 
+                    Upload images to generate four adventure video locations with a consistent character perspective. 
                     The AI will create detailed environment descriptions for video generation.
                   </p>
                 </div>
@@ -320,7 +344,7 @@ function App(): JSX.Element {
                 </span>
               ) : (
                 <span className="flex items-center justify-center gap-2">
-                  ✨ Generate Fantasy World
+                  ✨ Generate Adventure Video
                 </span>
               )}
             </button>
@@ -355,7 +379,7 @@ function App(): JSX.Element {
         {generatedImages.length > 0 && (
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              ✨ Generated Fantasy World Images
+              ✨ Generated Adventure Video Images
             </h3>
             <p className="text-gray-600 mb-6 text-sm">
               Your magical locations are being brought to life
@@ -404,7 +428,7 @@ function App(): JSX.Element {
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
             <div className="text-center mb-6">
               <h2 className="text-2xl font-bold text-green-800 mb-2">
-                🎉 Fantasy World Journey Complete!
+                🎉 Adventure Video Complete!
               </h2>
               <p className="text-green-700">
                 Your magical video journey is ready to explore
@@ -421,7 +445,7 @@ function App(): JSX.Element {
                 </div>
                 <div className="flex justify-center">
                   <button 
-                    onClick={() => downloadVideo(result.output.video.url, result.output.video.file_name || 'fantasy_world_journey.mp4')}
+                    onClick={() => downloadVideo(result.output.video.url, result.output.video.file_name || 'adventure_video.mp4')}
                     className="bg-green-600 text-white py-2 px-6 rounded-md hover:bg-green-700 transition-colors flex items-center gap-2"
                   >
                     📥 Download Video ({(result.output.video.file_size / 1024 / 1024).toFixed(1)} MB)

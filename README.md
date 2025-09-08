@@ -5,7 +5,7 @@ Transform your images into magical fantasy world video adventures using AI. Uplo
 ## Prerequisites
 
 - Node.js 18+ installed
-- A fal.ai account with at least $10 in credits
+- A fal.ai account with at least $13 in credits
 - Your fal.ai API key (get it at [https://fal.ai/](https://fal.ai/))
 
 ## Installation
@@ -32,7 +32,7 @@ npm run dev
 
 ### Step 1: Enter API Key
 - When you first open the app, you'll be prompted to enter your fal.ai API key
-- Make sure you have at least $10 in credits on your fal.ai account
+- Make sure you have at least $13 in credits on your fal.ai account
 - Your API key will be used to access the AI models for image and video generation
 
 ### Step 2: Upload Images
@@ -55,7 +55,7 @@ npm run dev
 
 ## Important Notes
 
-- **Cost**: Each full generation uses approximately $10 of fal.ai credits
+- **Cost**: Each full generation uses approximately $13 of fal.ai credits
 - **Processing Time**: The complete workflow takes 2-3 minutes
 - **File Size**: Final videos are typically 10-20 MB
 
