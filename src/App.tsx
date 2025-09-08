@@ -107,7 +107,7 @@ function App() {
         reasoning: true
       }
       
-      console.log('Submitting workflow with input:', workflowInput)
+      // Workflow submission started
       setCurrentStage('Generating adventure video descriptions...')
       
       const stream = await fal.stream("workflows/derek/wizarding-5-no-extend", {
@@ -115,7 +115,7 @@ function App() {
       })
 
       for await (const event of stream) {
-        console.log('Stream event:', event)
+        // Processing stream event
         setProgress(prev => [...prev, event])
         
         // Update stage based on the workflow step
@@ -146,7 +146,7 @@ function App() {
         }
         
         if (event.type === 'completion' || event.type === 'output') {
-          console.log('Important Event:', event)
+          // Processing completion event
         }
         if (event.type === 'error') {
           console.error('Workflow step error:', event)
@@ -154,7 +154,7 @@ function App() {
       }
 
       const finalResult = await stream.done()
-      console.log('Final result:', finalResult)
+      // Workflow completed successfully
       setResult(finalResult as WorkflowResult)
       setCurrentStage('Complete!')
     } catch (error: any) {
