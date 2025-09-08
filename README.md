@@ -1,12 +1,67 @@
-# React + Vite
+# Wizarding - Images to Video Adventure Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Transform your images into magical fantasy world video adventures using AI. Upload up to 4 images and watch as they're transformed into a cinematic journey through four unique fantasy locations.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 18+ installed
+- A fal.ai account with at least $10 in credits
+- Your fal.ai API key (get it at [https://fal.ai/](https://fal.ai/))
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+```bash
+git clone git@github.com:derekalia/wizarding.git
+cd wizarding
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser to `http://localhost:5173`
+
+## Usage
+
+### Step 1: Enter API Key
+- When you first open the app, you'll be prompted to enter your fal.ai API key
+- Make sure you have at least $10 in credits on your fal.ai account
+- Your API key will be used to access the AI models for image and video generation
+
+### Step 2: Upload Images
+- Click on the upload boxes to select images from your computer
+- You can upload between 1 to 4 images
+- These images will serve as inspiration for your fantasy world locations
+
+### Step 3: Generate Your Fantasy World
+- Once your images are uploaded, click the "Generate Fantasy World" button
+- The AI will:
+  1. Analyze your images and create detailed fantasy world descriptions
+  2. Generate 4 unique fantasy location images based on your input
+  3. Convert each image into a video sequence
+  4. Merge all videos into a final cinematic journey
+- The entire process takes approximately 2-3 minutes
+
+### Step 4: Download Your Video
+- Once complete, you can preview your fantasy world video directly in the browser
+- Click the "Download Video" button to save the final video to your computer
+
+## Important Notes
+
+- **Cost**: Each full generation uses approximately $10 of fal.ai credits
+- **Processing Time**: The complete workflow takes 2-3 minutes
+- **File Size**: Final videos are typically 10-20 MB
+
+## Tech Stack
+
+- React + Vite
+- Tailwind CSS
+- ShadCN UI Components  
+- fal.ai API for AI processing
