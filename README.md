@@ -1,6 +1,6 @@
 # Wizarding - Images to Video Adventure Generator
 
-Transform your images into magical fantasy world video adventures using AI. Upload up to 4 images and watch as they're transformed into a cinematic journey through four unique fantasy locations. THe Video results is about around 30 seconds
+Transform your images into magical fantasy world video adventures using AI. Upload up to 4 images and watch as they're transformed into a cinematic journey through four unique fantasy locations. The Video results is about around 30 seconds
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ Transform your images into magical fantasy world video adventures using AI. Uplo
 - A fal.ai account with at least $13 in credits
 - Your fal.ai API key (get it at [https://fal.ai/](https://fal.ai/))
 
-## Installation
+## Installation to Running it Locally
 
 1. Clone the repository:
 ```bash
