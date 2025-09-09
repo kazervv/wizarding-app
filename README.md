@@ -1,6 +1,6 @@
 # Wizarding - Images to Video Adventure Generator
 
-Transform your images into magical fantasy world video adventures using AI. Upload up to 4 images and watch as they're transformed into a cinematic journey through four unique fantasy locations.
+Transform your images into magical fantasy world video adventures using AI. Upload up to 4 images and watch as they're transformed into a cinematic journey through four unique fantasy locations. THe Video results is about around 30 seconds
 
 ## Prerequisites
 
